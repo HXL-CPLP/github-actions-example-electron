@@ -13,7 +13,7 @@ programma-exemplum-electron. Veja https://github.com/HXL-CPLP/forum/issues/61
     - [Linux-like](#linux-like)
         - [Online](#online)
         - [Windows-like](#windows-like)
-- [Licença](#licença)
+- [Licentiam](#licentiam)
 
 <!-- /TOC -->
 
@@ -26,12 +26,15 @@ programma-exemplum-electron. Veja https://github.com/HXL-CPLP/forum/issues/61
     - https://docs.github.com/pt/actions
   - **Electron Builder Action**
     - https://github.com/marketplace/actions/electron-builder-action
-- **Code**
+- **Programma codicem**
   - **Electron JS (oficial)**
     - https://www.electronjs.org/
   - **Electron Builder**
     - https://www.electron.build/
     - https://github.com/electron-userland/electron-builder
+  - **Exemplum**
+    - https://www.electron.build/#boilerplates
+    - https://github.com/samuelmeuli/mini-diary
 
 <!--
     - **.NET Linux, Ubuntu**
@@ -66,13 +69,25 @@ programma-exemplum-electron. Veja https://github.com/HXL-CPLP/forum/issues/61
 
 ### Linux-like
 ```bash
-#### programma-exemplum-electron: Linux
 
-### VSCode install _____________________________________________________________
+#### VSCode install ____________________________________________________________
 # @see https://code.visualstudio.com/download
 # @see https://snapcraft.io/code
 
-### .NET setup _________________________________________________________________
+#### Example code install ______________________________________________________
+# _[por-Latn]
+# No momento atual, 2021-10-24, tem-se várias opções. Vamos escolher uma.
+# [por-Latn]_
+
+git clone https://github.com/szwacz/electron-boilerplate.git szwacz-electron-boilerplate
+rm -fr szwacz-electron-boilerplate/.git
+cd szwacz-electron-boilerplate
+
+yarn install
+
+yarn run start
+
+_________________________________________________________________
 
 
 ```
@@ -89,7 +104,11 @@ programma-exemplum-electron. Veja https://github.com/HXL-CPLP/forum/issues/61
 # TODO: windows
 ```
 
-## Licença
+## Licentiam
+> \_[eng-Latn] License [eng-Latn]\_
+>
+> \_[por-Latn] Licença [por-Latn]\_
+
 
 [![Dominium publicum](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://unlicense.org/)
 
