@@ -55,6 +55,8 @@ jobs:
     - run: npm ci
 
     - run: npm run build --if-present
+      env:
+        DEBUG: electron-builder
 
     #### npm test ______________________________________________________________
     #### Option A: no Headless CI System .......................................
