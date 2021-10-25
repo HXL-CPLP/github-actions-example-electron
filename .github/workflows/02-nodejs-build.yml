@@ -56,4 +56,18 @@ jobs:
 
     - run: npm run build --if-present
 
-    - run: npm test
+    #### npm test ______________________________________________________________
+    #### Option A: no Headless CI System .......................................
+    # - run: npm test
+
+    #### Option B: Headless CI System ..........................................
+    # @see http://elementalselenium.com/tips/38-headless
+    # @see https://github.com/electron/electron/pull/21996/commits/98cb49bfc03be312d7747cc3818c9d035ce4dd5b
+    # @see https://github.com/marketplace/actions/gabrielbb-xvfb-action
+
+    - name: npm test (headless)
+      uses: GabrielBB/xvfb-action@v1
+      with:
+        run: npm test
+        # package.json -> szwacz-electron-boilerplate/package.json:
+        working-directory: ./szwacz-electron-boilerplate/
