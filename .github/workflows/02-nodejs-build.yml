@@ -37,7 +37,7 @@ jobs:
     defaults:
       run:
         # package.json -> szwacz-electron-boilerplate/package.json:
-        working-directory: ./szwacz-electron-boilerplat/
+        working-directory: ./szwacz-electron-boilerplate/
 
     steps:
 
@@ -49,7 +49,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         # package.json -> szwacz-electron-boilerplate/package.json:
-        cache-dependency-path: 'szwacz-electron-boilerpla/package-lock.json'
+        cache-dependency-path: 'szwacz-electron-boilerplate/package-lock.json'
 
     - run: npm ci
 
