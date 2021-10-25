@@ -47,7 +47,8 @@ jobs:
           package_root: szwacz-electron-boilerplate/
 
           # Name of the optional NPM build script which is executed before electron-builder (default: "build")
-          electron-builder: release
+          # build_script_name: release
+          build_script_name: pack
 
 # jobs:
 #   dotnet-action:
