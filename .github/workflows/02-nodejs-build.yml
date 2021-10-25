@@ -1,0 +1,42 @@
+# ARCHIVUM:        .github/workflows/02-nodejs-build.yml
+# LICENTIAM:        Dominium publicum
+# SPDX-License-Identifier: Unlicense
+# DOCUMENTORUM:     Links:
+#                     - https://docs.github.com/pt/actions
+#                     - https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+#                     - https://github.com/actions/starter-workflows/blob/main/ci/node.js.yml
+#                     - https://docs.github.com/pt/actions/learn-github-actions/workflow-syntax-for-github-actions
+
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: nodejs-build
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  # build:
+  nodejs-build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test

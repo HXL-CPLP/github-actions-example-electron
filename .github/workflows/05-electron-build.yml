@@ -1,0 +1,56 @@
+# ARCHIVUM:        .github/workflows/05-electron-build.yml
+# LICENTIAM:        Dominium publicum
+# SPDX-License-Identifier: Unlicense
+# DOCUMENTORUM:     Links:
+#                     - https://docs.github.com/pt/actions
+#                     - https://github.com/marketplace/actions/electron-builder-action
+#                     - https://github.com/samuelmeuli/action-electron-builder/blob/master/action.yml
+
+name: electron-build
+
+on:
+  push:
+    branches:
+      - main
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+jobs:
+  release:
+
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    needs: nodejs-build  # .github/workflows/02-nodejs-build.yml
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Build/release Electron app
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.github_token }}
+
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
+          # Directory where NPM/Yarn commands should be run
+          # default: "." (no subdirectory)
+          package_root: szwacz-electron-boilerplate/
+
+          # Name of the optional NPM build script which is executed before electron-builder (default: "build")
+          # build_script_name: release
+          build_script_name: pack
