@@ -52,11 +52,6 @@ jobs:
         # package.json -> szwacz-electron-boilerplate/package.json:
         cache-dependency-path: 'szwacz-electron-boilerplate/package-lock.json'
 
-    # @see https://github.com/marketplace/actions/snapcraft-action
-    # Reason: electron will try to deploy snap (but requires snapcraft installed)
-    - name: Install Snapcraft
-      uses: samuelmeuli/action-snapcraft@v1
-
     - run: npm ci
 
     - run: npm run build --if-present
