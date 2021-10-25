@@ -109,6 +109,15 @@ _________________________________________________________________
 
 ```
 
+
+<!--
+
+Para commitar com outro usuário
+$ GIT_COMMITTER_NAME="eticaaibot" GIT_COMMITTER_EMAIL="etica.of.a.ai@gmail.com" git commit --author="eticaaibot <etica.of.a.ai@gmail.com>" (...)
+
+
+-->
+
 #### Online
 
 > TODO:
