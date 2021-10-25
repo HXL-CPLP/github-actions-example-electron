@@ -62,4 +62,5 @@ jobs:
 
           # Name of the optional NPM build script which is executed before electron-builder (default: "build")
           # build_script_name: release
-          build_script_name: pack
+          # build_script_name: pack
+          build_script_name: pack2

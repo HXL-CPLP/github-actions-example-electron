@@ -116,12 +116,12 @@ Para commitar com outro usuário
 $ GIT_COMMITTER_NAME="eticaaibot" GIT_COMMITTER_EMAIL="etica.of.a.ai@gmail.com" git commit --author="eticaaibot <etica.of.a.ai@gmail.com>" (...)
 
 
-$ GIT_COMMITTER_NAME="eticaaibot" GIT_COMMITTER_EMAIL="etica.of.a.ai@gmail.com" git commit --author="eticaaibot <etica.of.a.ai@gmail.com>" -m 'v0.3.2'
+$ GIT_COMMITTER_NAME="eticaaibot" GIT_COMMITTER_EMAIL="etica.of.a.ai@gmail.com" git commit --author="eticaaibot <etica.of.a.ai@gmail.com>" -m 'v0.3.3'
 
 Create a tag (no need to commit)
-$ git tag v0.3.2
+$ git tag v0.3.3
 
-git push origin tag v0.3.2
+git push origin tag v0.3.3
 git push
 -->
 
