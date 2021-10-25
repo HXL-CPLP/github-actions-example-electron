@@ -25,6 +25,11 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
+    defaults:
+      run:
+        # package.json -> szwacz-electron-boilerplate/package.json:
+        working-directory: ./szwacz-electron-boilerplat/
+
     # Not possible, see https://github.community/t/how-do-i-specify-job-dependency-running-in-another-workflow/16482/5
     # needs: nodejs-build  # .github/workflows/02-nodejs-build.yml
 
