@@ -1,5 +1,11 @@
-# programma-exemplum-electron
-programma-exemplum-electron. Veja https://github.com/HXL-CPLP/forum/issues/61
+# Exemplo de GitHub Actions com aplicações Electron
+**[rascunho] Exemplo automação com [GitHub Actions](https://github.com/features/actions) para aplicações plataforma cruzada [Electron](https://www.electronjs.org/)**
+
+> - _HXL-CPLP/forum#61: Referências e apoio para automação, testes de qualidade e distribuição em canais de desktop e móvel para aplicações de uso humanitário_
+>   - https://github.com/HXL-CPLP/forum/issues/61
+> - _frontendbr/forum/discussions/2182: Referências de estudos de caso de uso avançado do GitHub Actions (ilimitado e gratuito para Open Source) inexplorado no Brasil; foco cross-platform_
+>   - https://github.com/frontendbr/forum/discussions/2182
+
 
 ---
 
@@ -111,6 +117,10 @@ _________________________________________________________________
 
 
 <!--
+
+TODO: this is only failing because Electron is trying to upload to
+      snapcraft (which was not configured to upload). So the current
+      build is actually okay
 
 Para commitar com outro usuário
 $ GIT_COMMITTER_NAME="eticaaibot" GIT_COMMITTER_EMAIL="etica.of.a.ai@gmail.com" git commit --author="eticaaibot <etica.of.a.ai@gmail.com>" (...)
