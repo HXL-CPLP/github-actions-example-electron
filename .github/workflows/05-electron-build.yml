@@ -1,10 +1,8 @@
-# ARCHIVUM:        .github/workflows/05-electron-build.yml
-# LICENTIAM:        Dominium publicum
-# SPDX-License-Identifier: Unlicense
-# DOCUMENTORUM:     Links:
-#                     - https://docs.github.com/pt/actions
-#                     - https://github.com/marketplace/actions/electron-builder-action
-#                     - https://github.com/samuelmeuli/action-electron-builder/blob/master/action.yml
+# SPDX-License-Identifier: Unlicense OR 0BSD
+
+# - https://docs.github.com/pt/actions
+# - https://github.com/marketplace/actions/electron-builder-action
+# - https://github.com/samuelmeuli/action-electron-builder/blob/master/action.yml
 
 name: electron-build
 

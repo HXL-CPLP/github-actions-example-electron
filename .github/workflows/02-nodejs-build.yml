@@ -1,14 +1,15 @@
-# ARCHIVUM:        .github/workflows/02-nodejs-build.yml
-# LICENTIAM:        Dominium publicum
-# SPDX-License-Identifier: Unlicense
-# DOCUMENTORUM:     Links:
-#                     - https://docs.github.com/pt/actions
-#                     - https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-#                     - https://github.com/actions/starter-workflows/blob/main/ci/node.js.yml
-#                     - https://docs.github.com/pt/actions/learn-github-actions/workflow-syntax-for-github-actions
+# SPDX-License-Identifier: Unlicense OR 0BSD
 
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# - https://docs.github.com/pt/actions
+# - https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# - https://github.com/actions/starter-workflows/blob/main/ci/node.js.yml
+# - https://docs.github.com/pt/actions/learn-github-actions/workflow-syntax-for-github-actions
+
+# This workflow will do a clean install of node dependencies,
+# cache/restore them, build the source code and run tests across
+# different versions of node
+# For more information see:
+# https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: nodejs-build
 
